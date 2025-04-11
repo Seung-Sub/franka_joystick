@@ -1,0 +1,33 @@
+<launch>
+  <!-- 조이스틱 입력을 위한 joy_node 실행 -->
+  <node pkg="joy" type="joy_node" name="joy_node" output="screen" />
+
+  <!-- joystick_pose_publisher 노드 실행 (private namespace에서 파라미터 읽도록 함) -->
+  <node pkg="franka_example_controllers"
+        type="joystick_pose_publisher"
+        name="joystick_pose_publisher"
+        output="screen">
+    <!-- 사용자 정의 초기 위치 및 orientation 파라미터 -->
+    <param name="initial_x" value="0.30706703867883317" />
+    <param name="initial_y" value="0.00010940133697616747" />
+    <param name="initial_z" value="0.4870130373815169" />
+    <param name="initial_orientation_w" value="0.999999819695519" />
+    <param name="initial_orientation_x" value="0.00032797606332628183" />
+    <param name="initial_orientation_y" value="0.0004983622336180797" />
+    <param name="initial_orientation_z" value="-6.837920302482268e-05" />
+    <!-- 조이스틱 감도 -->
+    <param name="scale_x" value="0.001" />
+    <param name="scale_y" value="0.001" />
+    <param name="scale_z" value="0.001" />
+  </node>
+</launch>
+
+
+
+
+
+
+
+
+
+
