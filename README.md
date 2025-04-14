@@ -6,6 +6,7 @@ roslaunch franka_example_controllers cartesian_impedance_example_controller.laun
 roslaunch franka_example_controllers joystick_pose_publisher.launch
 
 # install
+mkdir -p franka_ros_ws/src
 sudo apt-get update
 sudo apt-get install ros-noetic-joy
 rosrun joy joy_node
